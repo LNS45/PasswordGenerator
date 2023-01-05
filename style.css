@@ -9,6 +9,7 @@ header{
     position: relative;
     top: 0%;
     height: 5rem;
+    width: auto;
     background: url("/PasswordGenerator/images/header.jpg");
     margin-top: -21px;
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 15);
@@ -88,8 +89,9 @@ main{
     opacity: 0%;
 }
 footer{
-    margin: -2rem;
+    margin-top: -2rem;
     height: 9.375rem;
+    width: auto;
     font-size: 1.25rem;
     text-align: center;
     background: url("/PasswordGenerator/images/footer.jpg");
@@ -101,3 +103,52 @@ footer h4{
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 1);
 }
 
+
+/*Adaptacion de dispositivos*/
+
+@media (max-width: 1200px) {
+    body{
+        font-size: 18;
+    }
+}
+@media (max-width: 992px) {
+    body{
+        font-size: 15px;
+    }
+    .contenedor{
+        left: 20%;
+    }
+    footer{
+        font-size: 15px;
+    }
+}
+@media (max-width: 768px) {
+    body{
+        font-size: 12px;
+    }
+    .contenedor{
+        left: 15%;
+        width: 18rem;
+        height: 28.625rem;
+    }
+    footer{
+        font-size: 15px;
+    }
+}
+@media (max-width: 576px) {
+    body{
+        font-size: 10px;
+    }
+    main{
+        background: url("/PasswordGenerator/images/bg1.jpg");
+        padding: 5%;
+    }
+    .contenedor{
+        left: 15%;
+        width: 15rem;
+        height: 25.625rem;
+    }
+    footer{
+        font-size: 15px;
+    }
+}
