@@ -1,13 +1,15 @@
 body{
     width: auto;
     height: auto;
-    margin: 0;
+    margin: -1.625em 0 0 0;
     font-family: 'Minecraft', sans-serif;
+    font-size: 19px;
 }
 header{
     position: relative;
     top: 0%;
-    height: 80px;
+    height: 5rem;
+    width: auto;
     background: url("/PasswordGenerator/images/header.jpg");
     margin-top: -21px;
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 15);
@@ -15,23 +17,25 @@ header{
 header h1{
     position: relative;
     text-align: center;
-    font-size: 20px;
     top: 50%;
     font-family: 'Minecraft', sans-serif;
     color: aliceblue;
 }
 main{
-    background: url("/PasswordGenerator/images/bg1.jpg");
+    background: url("/PasswordGenerator/images/bgwide.jpg");
     padding: 5%;
 }
 .contenedor{
     position: relative;
-    height: 500px;
+    width: 25rem;
+    height: 30.625rem;
+    left: 18.75rem;
     padding: 5%;
     background-color: #855100;
     border-radius: 10px;
     opacity: 90%;
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 15);
+
 }
 .contenedor p{
     text-align: center;
@@ -39,48 +43,112 @@ main{
 }
 .images{
     position: relative;
-
     padding: 4%;
 }
 .images img{
     position: relative;
-    margin-left: 7%;
+    margin-left: 2.5rem;
 }
 .contenedor input{
     margin: 5% 0 5% 0;
     width: 94%;
-    height: 25px;
+    height: 1.5625rem;
     display: block;
     border-radius: 25px;
     text-align: right;
-    font-size: 20px;
-    padding: 10px 5px 0 0;
+    font-size: 1.25rem;
+    padding: .625rem .3125rem 0 0;
     color: black;
 }
 .contenedor button{
     position: relative;
-    width: 40%;
-    height: 30px;
-    margin: 3%;
+    width: 9.375rem;
+    height: 1.875rem;
+    margin: 1.25rem;
     display: block;
-    left: 30%;
+    left: 7.5rem;
     border-radius: 25px;
     font-family: 'Minecraft', sans-serif;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 15);
+    transition: .5s;
+    cursor: pointer;
+}
+.contenedor button:hover{
+    transform: scale(1.2);
+}
+.contenedor button:active{
+    background-color: gray;
 }
 #enderman{
     position: relative;
-    left: 7em;
-    margin-top: 20%;
+    left: 8em;
+    margin-top: 2.3rem;
+    transition: .5s;
 }
 #enderman:hover{
-    display: none;
+    opacity: 0%;
 }
 footer{
-    margin: 0px;
-    height: 100%;
-    font-size: 10px;
+    margin-top: -2rem;
+    height: 9.375rem;
+    width: auto;
+    font-size: 1.25rem;
     text-align: center;
     background: url("/PasswordGenerator/images/footer.jpg");
-    padding: 5%;
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 15);
+}
+footer h4{
+    position: relative;
+    top: 3.75rem;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 1);
+}
+
+
+/*Adaptacion de dispositivos*/
+
+@media (max-width: 1200px) {
+    body{
+        font-size: 18;
+    }
+}
+@media (max-width: 992px) {
+    body{
+        font-size: 15px;
+    }
+    .contenedor{
+        left: 20%;
+    }
+    footer{
+        font-size: 15px;
+    }
+}
+@media (max-width: 768px) {
+    body{
+        font-size: 12px;
+    }
+    .contenedor{
+        left: 15%;
+        width: 18rem;
+        height: 28.625rem;
+    }
+    footer{
+        font-size: 15px;
+    }
+}
+@media (max-width: 576px) {
+    body{
+        font-size: 10px;
+    }
+    main{
+        background: url("/PasswordGenerator/images/bg1.jpg");
+        padding: 5%;
+    }
+    .contenedor{
+        left: 15%;
+        width: 15rem;
+        height: 25.625rem;
+    }
+    footer{
+        font-size: 15px;
+    }
 }
