@@ -9,6 +9,7 @@ mayusculas = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q
 caracteres = ["!","@","#","*","<",">","=","%","&","/"];
 var clave = [];
 var complejidad = 15;
+var clavefinal;
 
 function crearclave(){
     for(i = 1; i <= complejidad; i++){
@@ -33,6 +34,20 @@ function crearclave(){
         }
     }
     clavefinal = clave.join("");
-    console.log(clavefinal);
 }
-crearclave();
+function eliminarClave(){
+    for(i = 0; i <= clave.length; i++){
+        clave.splice(0,i);    
+    }
+}
+
+/**********Funcionalidad HTML************************************************************/
+
+function activarGenerar(){
+    crearclave();
+    escribirClave();
+    eliminarClave();
+}
+function escribirClave(){
+    document.getElementById("text").innerHTML = clavefinal;
+}
