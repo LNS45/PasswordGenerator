@@ -51,3 +51,8 @@ function activarGenerar(){
 function escribirClave(){
     document.getElementById("text").innerHTML = clavefinal;
 }
+function botoncopiar(){
+    var contenido = document.getElementById("text");
+    contenido.select();
+    document.execCommand('copy');
+}
